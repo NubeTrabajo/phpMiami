@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style>
+
+	body{
+		background-image: url("https://images6.alphacoders.com/584/thumb-1920-584627.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;  
+		margin-bottom: -10px;
+	}
+	header{
+		background-color:white;
+		margin:-8px;
+		padding:50px;
+		padding-top:25px;
+		padding-bottom:25px;
+	}
+	#header_div1{
+		height: 50px;
+		display: inline-flex;
+		margin: 0;
+	}
+	#header_div2{
+		height: 50px;
+		display: inline-flex;
+		float:top;
+		margin-bottom: -10px;
+		padding-left: 0px;
+		padding-right: 50px;
+	}
+	#header_div2 *{
+		margin-left: 25px;
+		margin-right: 25px;
+		text-decoration: none;
+	}
+	#header_div2  a font:hover{
+		margin-left: 25px;
+		margin-right: 25px;
+		padding: 5px;
+		background-color: red;
+		color:white;
+	}
+
+	#desplegable{
+		display:block;
+		background-color:black;
+		margin-left:-8px;
+		margin-right:-8px;
+		height: 20px;
+		padding:10px;
+	}
+
+	#desp_menu{
+		display: inline-table;
+		}
+	#desp_menu a{
+		font: oblique bold 100%;
+		text-decoration: none;
+		color:white;
+		margin-left: 50px;
+		margin-right: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	#desp_menu a:hover{
+		background-color: red;
+	}
+	#menu_desp_boton{
+		background:grey;
+		border: 2px solid grey;
+		border-radius: 0 0 10px 10px;
+		margin:-8px;
+		margin-bottom: 0px;
+		width: 100px;
+		padding:2px;
+	}
+
+	main{
+		background-color:white;
+		padding: 100px;
+		width: 700px;
+		height: 2000px;
+	}
+
+	#lineafooter{
+		background-color:grey;
+		margin-bottom: 4px;
+		margin-left: -8px;
+		margin-right: -8px;
+		height: 5px;
+		padding:2px;
+	}
+
+	footer{
+	background-color: #AAAAAA;
+	color: white;
+	margin:-8px;
+	padding-top:100px;
+	padding-bottom:100px; 
+	}
+
+
+	#creadores{
+		background-color: black;
+		color: white;
+		margin:-8px;
+		padding: 20px;
+		padding-top:20px;
+		padding-bottom:20px; 
+	}
+
+</style>
+<head>
+<title>Plantilla</title>	
+</head>
+<body>
+	<header>
+		<center><div id="header_div1">
+			<div>
+				<form action="buscador_index.php" method="post">
+					<div style="display: inline-table;"><input type="text" style="width: 200px; height: 23px" placeholder="Busqueda"></input><input type="submit" value="🔎" style="height: 35px;width: 35px;"/></div>		
+				</form>
+			</div>
+				<script>
+					function hora(){
+						var dia=new Array(7);
+							dia[0]="Domingo";
+							dia[1]="Lunes";
+							dia[2]="Martes";
+							dia[3]="Miercoles";
+							dia[4]="Jueves";
+							dia[5]="Viernes";
+							dia[6]="Sabado";
+						var mes=new Array(12);
+							mes[0]="enero";
+							mes[1]="febrero";
+							mes[2]="marzo";
+							mes[3]="abril";
+							mes[4]="mayo";
+							mes[5]="junio";
+							mes[6]="julio";
+							mes[7]="agosto";
+							mes[8]="septiembre";
+							mes[9]="octubre";
+							mes[10]="noviembre";
+							mes[11]="diciembre";
+						var fecha = new Date();
+						var ano = dia[fecha.getDay()]+" en "+mes[fecha.getMonth()]+" en "+fecha.getFullYear();
+						var hora = fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds();
+						var fechaHora = ano+"<br/>"+hora
+						document.getElementById("reloj").innerHTML = fechaHora;
+					}
+					setInterval(hora,1000);
+
+				</script>
+			<div id="reloj" />
+		</div></center>
+		<hr/>
+		<center><div id="header_div2">
+			<div>
+				<a href="#"><img src="" height=30px width="30px" style="margin-right: -20px;"><font color="red" size="5">Cita previa</font></img></a>
+			</div>
+			<div>
+				<a href="#"><img src="" height=30px width="30px" style="margin-right: -20px;"><font color="red" size="5">Contacto</font></img></a>
+			</div>
+			<div>
+				<a href="#"><img src="" height=30px width="30px" style="margin-right: -20px;"><font color="white" style="background-color: red; padding: 5px" size="4">Sede Electrónica</font></img></a>
+			</div>
+		</div></center>
+		<hr/>
+	</header>
+	<div id="desplegable">
+		<center>
+			<div  id="desp_menu">
+				<a href="#">Ciudad</a>
+				<a href="#">Multimedia</a>
+				<a href="#">Leyes y más</a>
+				<a href="#">Servicios</a>
+				<a href="#">Empresa</a>
+				<a href="#">Ayuntamiento</a>
+
+			</div>
+		</center>
+	</div>
+	<center><main>
+	</main></center>
+</body>
+<div id="lineafooter"></div>
+<footer><center>
+</center></footer>
+<div id="creadores">
+	<center>Sistema de gestión del ayuntamiento de Mordor.<br/> Created by Rodrigo, Bryan Sánchez and Pablo Garcia.</center>
+</div>
+</html>
